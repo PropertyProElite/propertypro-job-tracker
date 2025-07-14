@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyPro Job Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.1/auth0-spa-js.production.js"></script>
+</head>
+<body>
+
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="error-banner" class="error-banner">
+        <span id="error-message"></span>
+        <button id="close-error-btn">&times;</button>
+    </div>
+
+    <header class="app-header">
+        <h1><i class="fa-solid fa-toolbox"></i> PropertyPro Tracker</h1>
+        <div id="auth-container">
+            <span id="user-profile"></span>
+            <button id="login-btn" class="auth-btn">Log In</button>
+            <button id="logout-btn" class="auth-btn" style="display: none;">Log Out</button>
+        </div>
+    </header>
+
+    <main id="app-container" class="container" style="display: none;">
+        <div class="main-layout">
+            <div id="jobs-list-container" class="jobs-list-panel">
+                <h2>My Jobs</h2>
+                <div id="jobs-list">
+                    </div>
+            </div>
+
+            <div id="job-details-container" class="job-details-panel">
+                <div id="job-details-content">
+                    <div class="placeholder">
+                        <i class="fa-solid fa-list-check"></i>
+                        <p>Select a job from the list to see details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="login-prompt" class="container">
+        <h2>Please log in to view your assigned jobs.</h2>
+    </div>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
