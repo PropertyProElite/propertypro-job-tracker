@@ -3,8 +3,7 @@
 let auth0Client = null;
 
 // These values will be populated from Netlify's environment variables.
-// You will set these up in the Netlify UI later.
-const AUTH0_DOMAIN = 'dev-nijf265lqrhkp218.auth0.com'; // Placeholder
+const AUTH0_DOMAIN = 'dev-nijf265lqrhkp218.us.auth0.com'; // Placeholder
 const AUTH0_CLIENT_ID = 'impJEtMVSZHPmGqv5iUorqH2h7461Gjo'; // Placeholder
 const AUTH0_AUDIENCE = 'https://propertypro-elite-dashboard.netlify.app'; // Placeholder
 
@@ -59,11 +58,3 @@ export const getToken = async () => {
     return token;
   } catch (error) {
     if (error.error === 'login_required' |
-
-| error.error === 'consent_required') {
-      await login();
-    }
-    console.error("Error getting token silently:", error);
-    return null;
-  }
-};
