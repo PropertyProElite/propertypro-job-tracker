@@ -4,9 +4,9 @@ let auth0Client = null;
 
 // These values will be populated from Netlify's environment variables.
 // You will set these up in the Netlify UI later.
-const AUTH0_DOMAIN = 'YOUR_AUTH0_DOMAIN'; // Placeholder
-const AUTH0_CLIENT_ID = 'YOUR_AUTH0_CLIENT_ID'; // Placeholder
-const AUTH0_AUDIENCE = 'YOUR_AUTH0_AUDIENCE'; // Placeholder
+const AUTH0_DOMAIN = 'dev-nijf265lqrhkp218.auth0.com'; // Placeholder
+const AUTH0_CLIENT_ID = 'impJEtMVSZHPmGqv5iUorqH2h7461Gjo'; // Placeholder
+const AUTH0_AUDIENCE = 'https://propertypro-elite-dashboard.netlify.app'; // Placeholder
 
 const configureClient = async () => {
   auth0Client = await auth0.createAuth0Client({
