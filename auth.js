@@ -58,3 +58,11 @@ export const getToken = async () => {
     return token;
   } catch (error) {
     if (error.error === 'login_required' |
+
+| error.error === 'consent_required') {
+      await login();
+    }
+    console.error("Error getting token silently:", error);
+    return null;
+  }
+};
